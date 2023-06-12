@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HotelDetailActivity">
+
+    <ImageView
+        android:id="@+id/hotelImageView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_toEndOf="@id/hotelImageView">
+
+        <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/hotelNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotelImageView"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hotelDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotelNameTextView"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/hotelFacilitiesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotelDescriptionTextView"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/hotelIntroduceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotelFacilitiesTextView"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/hotelTelTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotelIntroduceTextView"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
